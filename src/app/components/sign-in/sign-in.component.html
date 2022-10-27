@@ -1,0 +1,46 @@
+<!-- Login page -->
+<div class="container">
+    <div class="row">
+        <div class="col-md-6">
+            <div class="card">
+                <div class="text-center">
+                    <h2> Login </h2>
+                    <h6>Please enter your email and password </h6>
+                </div>
+                <!-- SignIn form -->
+                <form [formGroup]="signInForm" (ngSubmit)="signInSubmit()">
+                    <!-- Field 1 --  Email address  -->
+                    <div class="form-group">
+                        <label for="exampleInputEmail1" class="form-label">Email address</label>
+                        <input type="email" formControlName="email" class="form-control" placeholder="Enter email.."
+                            id="exampleInputEmail1" aria-describedby="emailHelp">
+                        <div id="emailHelp" class="form-text">We'll never share your email with anyone else.</div>
+                        <span class="text-danger"
+                            *ngIf="signInForm.controls['email'].dirty && signInForm.controls['email'].hasError('required')">
+                            *Email id is required
+                        </span>
+                        <span class="text-danger"
+                            *ngIf="signInForm.controls['email'].dirty && signInForm.controls['email'].hasError('email')">
+                            Please enter a valid email
+                        </span>
+                    </div>
+                    <!-- Field 2 --  Password  -->
+                    <div class="mb-3">
+                        <label for="exampleInputPassword1" class="form-label">Password</label>
+                        <input type="password" formControlName="password" class="form-control"
+                            placeholder="Enter password.." id="exampleInputPassword1">
+                        <span class="text-danger"
+                            *ngIf="signInForm.controls['password'].dirty && signInForm.hasError('required', 'password')">*Password
+                            id is required</span>
+
+                    </div>
+                    <!-- Login button -->
+                    <button type="submit" [disabled]="submitLoading" class="btn btn-primary">
+                        Login 
+                        <span *ngIf="submitLoading" class="fa fa-spinner fa-spin"></span>
+                    </button>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>

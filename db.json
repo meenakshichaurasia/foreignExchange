@@ -1,0 +1,80 @@
+// {
+//   "dataList": [
+//     {
+//       "market": "USD vs GBP ",
+//       "sellingPrice": "999991.53287",
+//       "buyingPrice": "111.54245",
+//       "id": 1
+//     },
+//     {
+//       "market": "USD",
+//       "sellingPrice": "11112",
+//       "buyingPrice": "55555",
+//       "id": 4
+//     },
+//     {
+//       "market": "INR",
+//       "sellingPrice": "1212121",
+//       "buyingPrice": "99999",
+//       "id": 5
+//     },
+//     {
+//       "market": "INR",
+//       "sellingPrice": "99993",
+//       "buyingPrice": "552",
+//       "id": 6
+//     },
+//     {
+//       "market": "INR",
+//       "sellingPrice": "121555",
+//       "buyingPrice": "55229",
+//       "id": 7
+//     },
+//     {
+//       "market": "USD",
+//       "sellingPrice": "999999",
+//       "buyingPrice": "99999",
+//       "id": 9
+//     },
+//     {
+//       "market": "INR",
+//       "sellingPrice": "7311",
+//       "buyingPrice": "77443",
+//       "id": 10
+//     },
+//     {
+//       "market": "INR",
+//       "sellingPrice": "9977",
+//       "buyingPrice": "11111",
+//       "id": 11
+//     },
+//     {
+//       "market": "INR",
+//       "sellingPrice": "111",
+//       "buyingPrice": "11",
+//       "id": 12
+//     },
+//     {
+//       "market": "INR",
+//       "sellingPrice": "11",
+//       "buyingPrice": "11",
+//       "id": 13
+//     },
+//     {
+//       "market": "USD vs INR ",
+//       "sellingPrice": "77",
+//       "buyingPrice": "11",
+//       "id": 17
+//     }
+//   ],
+//   "comments": [
+//     {
+//       "id": 1,
+//       "body": "some comment",
+//       "postId": 1
+//     }
+//   ],
+//   "profile": {
+//     "name": "typicode"
+//   }
+// }

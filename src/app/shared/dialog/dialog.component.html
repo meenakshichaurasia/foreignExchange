@@ -1,0 +1,57 @@
+<!-- Angular material dialog.
+This is the dialog component which opens up when we click on "Add trading data". -->
+<h1 mat-dialog-title> Add trading data</h1>
+<div mat-dialog-content>
+  <form [formGroup]="addForm">
+    <!-- Field 1-- market -->
+    <mat-form-field appearance="outline">
+      <mat-label>Market</mat-label>
+      <input formControlName="market" matInput placeholder="Add market">
+      <span class="text-danger"
+        *ngIf="addForm.controls['market'].dirty && addForm.controls['market'].hasError('required')">
+        *Market is required
+      </span>
+      <span class="text-danger"
+        *ngIf="addForm.controls['market'].dirty && addForm.controls['market'].hasError('market')">
+        Please enter a valid market
+      </span>
+    </mat-form-field>
+    <!-- Field 2-- Selling Price -->
+    <mat-form-field appearance="outline">
+      <mat-label>Selling Price</mat-label>
+      <input type="number" formControlName="sellingPrice" matInput placeholder="Add selling price">
+      <span class="text-danger"
+        *ngIf="addForm.controls['sellingPrice'].dirty && addForm.controls['sellingPrice'].hasError('required')">
+        *sellingPrice is required
+      </span>
+      <span class="text-danger"
+        *ngIf="addForm.controls['sellingPrice'].dirty && addForm.controls['sellingPrice'].hasError('sellingPrice')">
+        Please enter a valid sellingPrice
+      </span>
+    </mat-form-field>
+    <!-- Field 2-- Buying Price -->
+    <mat-form-field appearance="outline">
+      <mat-label>Buying Price</mat-label>
+      <input type="number" formControlName="buyingPrice" matInput placeholder="Add buying price">
+      <span class="text-danger"
+        *ngIf="addForm.controls['buyingPrice'].dirty && addForm.controls['buyingPrice'].hasError('required')">
+        *buyingPrice is required
+      </span>
+      <span class="text-danger"
+        *ngIf="addForm.controls['buyingPrice'].dirty && addForm.controls['buyingPrice'].hasError('buyingPrice')">
+        Please enter a valid buyingPrice
+      </span>
+    </mat-form-field>
+  </form>
+</div>
+<!-- Save/Update and cancel buttons -->
+<div mat-dialog-actions [align]="'end'">
+  <button mat-raised-button color="warn" mat-dialog-close>
+    Cancel
+  </button>
+  <button style="margin-left: 7px;" mat-raised-button color="primary" [disabled]="addTradeLoading" (click)="addData()">
+    {{actionBtn}}
+    <span *ngIf="addTradeLoading" class="fa fa-spinner fa-spin"></span>
+  </button>
+
+</div>
